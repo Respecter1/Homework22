@@ -68,8 +68,8 @@ void List::PopBack()
 	}
 	else
 	{
-		Node* previous = head;//попередній
-		Node* current = head->next;//данний
+		Node* previous = head;//РїРѕРїРµСЂРµРґРЅС–Р№
+		Node* current = head->next;//РґР°РЅРЅРёР№
 
 		while (current->next != nullptr)
 		{
@@ -110,7 +110,7 @@ void List::Remove(const int& value)
 	{
 		if (current->data == value)
 		{
-			if (previous == nullptr)//коли previous складається лише с 1 елемента
+			if (previous == nullptr)//РєРѕР»Рё previous СЃРєР»Р°РґР°С”С‚СЊСЃСЏ Р»РёС€Рµ СЃ 1 РµР»РµРјРµРЅС‚Р°
 			{
 				head = head->next;
 			}
@@ -262,7 +262,7 @@ void List::Copy(const List& other)
 	}
 	else
 	{
-		head = new Node{ other.head->data,nullptr };//указує на новий вузов
+		head = new Node{ other.head->data,nullptr };//СѓРєР°Р·СѓС” РЅР° РЅРѕРІРёР№ РІСѓР·РѕРІ
 
 		Node* current = head;
 		Node* otherCurrent = other.head;
