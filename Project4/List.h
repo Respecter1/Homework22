@@ -5,7 +5,7 @@ class List
 {
 private:
 
-	void Copy(const List& other);//копіює інший список(цей метод зроблен для уникнення дублювання коду
+	void Copy(const List& other);//РєРѕРїС–СЋС” С–РЅС€РёР№ СЃРїРёСЃРѕРє(С†РµР№ РјРµС‚РѕРґ Р·СЂРѕР±Р»РµРЅ РґР»СЏ СѓРЅРёРєРЅРµРЅРЅСЏ РґСѓР±Р»СЋРІР°РЅРЅСЏ РєРѕРґСѓ
 
 	struct Node
 	{
@@ -13,8 +13,8 @@ private:
 		Node* next;
 	};
 
-	Node* head; //вказівник на голову 
-	Node* tail; //хвіст
+	Node* head; //РІРєР°Р·С–РІРЅРёРє РЅР° РіРѕР»РѕРІСѓ 
+	Node* tail; //С…РІС–СЃС‚
 	size_t size;
 
 public:
@@ -44,26 +44,26 @@ public:
 
 	~List();
 
-	// --- Insert method ---(методи вставки)
+	// --- Insert method ---(РјРµС‚РѕРґРё РІСЃС‚Р°РІРєРё)
 
 	void PushBack(const T& value);
 	void PushFront(const T& value);
 
-	// --- Remove methods ---(методи які видаляють)
+	// --- Remove methods ---(РјРµС‚РѕРґРё СЏРєС– РІРёРґР°Р»СЏСЋС‚СЊ)
 
-	void PopBack();//видалити з кінця
-	void PopFront();//видалити з початку 
-	void Remove(const T& value);// видаляти вузов вставляючи певне значення, буде шукати чи є цей вузов с таким значенням. Якщо є тоді видаляє.
-	void Clear();//все очищає
+	void PopBack();//РІРёРґР°Р»РёС‚Рё Р· РєС–РЅС†СЏ
+	void PopFront();//РІРёРґР°Р»РёС‚Рё Р· РїРѕС‡Р°С‚РєСѓ 
+	void Remove(const T& value);// РІРёРґР°Р»СЏС‚Рё РІСѓР·РѕРІ РІСЃС‚Р°РІР»СЏСЋС‡Рё РїРµРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ, Р±СѓРґРµ С€СѓРєР°С‚Рё С‡Рё С” С†РµР№ РІСѓР·РѕРІ СЃ С‚Р°РєРёРј Р·РЅР°С‡РµРЅРЅСЏРј. РЇРєС‰Рѕ С” С‚РѕРґС– РІРёРґР°Р»СЏС”.
+	void Clear();//РІСЃРµ РѕС‡РёС‰Р°С”
 
 	// --- Find methods ---
 
-	bool Find(const T& value) const;// для пошуку, в душках ми указуємо значеннння яке треба знайти. І будемо повертати [try] якщо зннайшло [false] якщо ні  
+	bool Find(const T& value) const;// РґР»СЏ РїРѕС€СѓРєСѓ, РІ РґСѓС€РєР°С… РјРё СѓРєР°Р·СѓС”РјРѕ Р·РЅР°С‡РµРЅРЅРЅРЅСЏ СЏРєРµ С‚СЂРµР±Р° Р·РЅР°Р№С‚Рё. Р† Р±СѓРґРµРјРѕ РїРѕРІРµСЂС‚Р°С‚Рё [try] СЏРєС‰Рѕ Р·РЅРЅР°Р№С€Р»Рѕ [false] СЏРєС‰Рѕ РЅС–  
 
-	// --- Сheck size methods ---(методи які перевіряють розмір)
+	// --- РЎheck size methods ---(РјРµС‚РѕРґРё СЏРєС– РїРµСЂРµРІС–СЂСЏСЋС‚СЊ СЂРѕР·РјС–СЂ)
 
-	bool IsEmpty() const;//перевіряє чи список являється пустий 
-	size_t Size() const;//повертає розмір нашого списку
+	bool IsEmpty() const;//РїРµСЂРµРІС–СЂСЏС” С‡Рё СЃРїРёСЃРѕРє СЏРІР»СЏС”С‚СЊСЃСЏ РїСѓСЃС‚РёР№ 
+	size_t Size() const;//РїРѕРІРµСЂС‚Р°С” СЂРѕР·РјС–СЂ РЅР°С€РѕРіРѕ СЃРїРёСЃРєСѓ
 
 	// --- Assigment operator ---
 
@@ -89,7 +89,7 @@ void List<T>::Copy(const List<T>& other)//O(n)
 	}
 	else
 	{
-		head = new Node{ other.head->data,nullptr };//указує на новий вузов
+		head = new Node{ other.head->data,nullptr };//СѓРєР°Р·СѓС” РЅР° РЅРѕРІРёР№ РІСѓР·РѕРІ
 
 		Node* current = head;
 		Node* otherCurrent = other.head;
@@ -193,8 +193,8 @@ void List<T>::PopBack()
 	}
 	else
 	{
-		Node* previous = head;//попередній
-		Node* current = head->next;//данний
+		Node* previous = head;//РїРѕРїРµСЂРµРґРЅС–Р№
+		Node* current = head->next;//РґР°РЅРЅРёР№
 
 		while (current->next != nullptr)
 		{
@@ -240,7 +240,7 @@ void List<T>::Remove(const T& value)//O(n)
 	{
 		if (current->data == value)
 		{
-			if (previous == nullptr)//коли previous складається лише с 1 елемента
+			if (previous == nullptr)//РєРѕР»Рё previous СЃРєР»Р°РґР°С”С‚СЊСЃСЏ Р»РёС€Рµ СЃ 1 РµР»РµРјРµРЅС‚Р°
 			{
 				head = head->next;
 
