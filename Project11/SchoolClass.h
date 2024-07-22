@@ -78,7 +78,7 @@ ostream& operator<<(ostream& os, const Student& rhs)
     return os;
 }
 
-// Êëàñ SchoolClass
+// ÐšÐ»Ð°Ñ SchoolClass
 class SchoolClass
 {
 public:
