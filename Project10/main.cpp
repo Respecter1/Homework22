@@ -1,7 +1,7 @@
 /*
-		10. Напишіть виконання класу SchoolClass, показаного у лістингу 19.8 як списку
-		. Для додавання до списку чотирьох студентів використовуйте функцію push_back()
-		. Потім пройдіться по отриманому списку та збільште вік кожного студента на один рік.
+		10. РќР°РїРёС€С–С‚СЊ РІРёРєРѕРЅР°РЅРЅСЏ РєР»Р°СЃСѓ SchoolClass, РїРѕРєР°Р·Р°РЅРѕРіРѕ Сѓ Р»С–СЃС‚РёРЅРіСѓ 19.8 СЏРє СЃРїРёСЃРєСѓ
+		. Р”Р»СЏ РґРѕРґР°РІР°РЅРЅСЏ РґРѕ СЃРїРёСЃРєСѓ С‡РѕС‚РёСЂСЊРѕС… СЃС‚СѓРґРµРЅС‚С–РІ РІРёРєРѕСЂРёСЃС‚РѕРІСѓР№С‚Рµ С„СѓРЅРєС†С–СЋ push_back()
+		. РџРѕС‚С–Рј РїСЂРѕР№РґС–С‚СЊСЃСЏ РїРѕ РѕС‚СЂРёРјР°РЅРѕРјСѓ СЃРїРёСЃРєСѓ С‚Р° Р·Р±С–Р»СЊС€С‚Рµ РІС–Рє РєРѕР¶РЅРѕРіРѕ СЃС‚СѓРґРµРЅС‚Р° РЅР° РѕРґРёРЅ СЂС–Рє.
 */
 
 #include "SchoolClass.h"
@@ -20,7 +20,7 @@ int main()
 	MyClass.push_back(Student("Peter", 16));
 
 	for (auto it = MyClass.begin(); it != MyClass.end(); ++it) {
-		*it += 1;  // Збільшуємо вік на 1
+		*it += 1;  // Р—Р±С–Р»СЊС€СѓС”РјРѕ РІС–Рє РЅР° 1
 		std::cout << *it << " ";
 	}
 
@@ -29,49 +29,3 @@ int main()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-////
-EmptyClass;:
-max_size() = 576460752303423487 size() = 0      capacity() = 0   empty
-
-GrowingClass(3) :
-	max_size() = 576460752303423487 size() = 3      capacity() = 3   not empty
-	New Student is 16 years old
-	New Student is 16 years old
-	New Student is 16 years old
-
-	GrowingClass(3) after assigning students :
-	max_size() = 576460752303423487 size() = 3      capacity() = 3   not empty
-	New Student is 16 years old
-	Sally is 15 years old
-	Bill is 17 years old
-
-	GrowingClass() after aded 4ht student :
-	max_size() = 576460752303423487 size() = 4      capacity() = 6   not empty
-	New Student is 16 years old
-	Sally is 15 years old
-	Bill is 17 years old
-	Peter is 16 years old
-
-	GrowingClass() after Set :
-	max_size() = 576460752303423487 size() = 4      capacity() = 6   not empty
-	Harry is 18 years old
-	Sally is 15 years old
-	Bill is 17 years old
-	Peter is 16 years old
-
-
-*/
