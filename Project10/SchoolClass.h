@@ -81,14 +81,14 @@ ostream& operator<<(ostream& os, const Student& rhs)
 }
 
 template <class T>
-void ShowVector(const vector<T>& v); // Відображає властивості вектора
+void ShowVector(const vector<T>& v); // Р’С–РґРѕР±СЂР°Р¶Р°С” РІР»Р°СЃС‚РёРІРѕСЃС‚С– РІРµРєС‚РѕСЂР°
 
 typedef vector<Student> SchoolClass;
 
 
 
 //
-// Відображає властивості вектора
+// Р’С–РґРѕР±СЂР°Р¶Р°С” РІР»Р°СЃС‚РёРІРѕСЃС‚С– РІРµРєС‚РѕСЂР°
 //
 template <class T>
 void ShowVector(const vector<T>& v)
